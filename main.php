@@ -14,6 +14,8 @@ if(count($_POST)>0){
 	if(is_array($row)) {
 		  $_SESSION["name"] = $row['user_name'];
 			$_SESSION["password"] = $row['user_password'];
+		     header('home.html');
+		     exit();
 
 	} else {
 		$message = "Invalid Username or Password!";
