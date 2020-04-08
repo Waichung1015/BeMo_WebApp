@@ -58,7 +58,6 @@ if(count($_POST)>0){
 <!-- End Facebook Pixel Code -->
 
 
-
 <link rel="stylesheet" type="text/css" media="screen" href="rw_common/themes_Endeavor/style.css" />
 <style type="text/css" media="all">#feature {background-image: url(https://cdainterview.com/resources/cda-interview-guide.jpg);}</style><!--background image-->
 <!--[if lt IE 9]>
