@@ -1,7 +1,14 @@
 <?php
 $message ="";
 if(count($_POST)>0){
-	$con = mysqli_connect('127.0.0.1:3306','root','','admin') or die('Unable To connect');
+	$url = parse_url(getenv("mysql://bdcfb3a5a84835:b940be04@us-cdbr-iron-east-01.cleardb.net/heroku_92ff807af41df11?reconnect=true"));
+  $server = $url["host"];
+  $username = $url["user"];
+  $password = $url["pass"];
+  $db = substr($url["path"], 1);
+
+  $con = new mysqli($server, $username, $password, $db) or die('Unable To connect');
+	
 	$result = mysqli_query($con,"SELECT * FROM user_info WHERE user_name='" . $_POST["user_name"] . "' and user_password = '". $_POST["user_password"]."'");
 	$row  = mysqli_fetch_array($result);
 	if(is_array($row)) {

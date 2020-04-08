@@ -1,5 +1,11 @@
 <?php
-$con = mysqli_connect('127.0.0.1:3306','root','','cda_db') or die('Unable To connect');
+$url = parse_url(getenv("mysql://bdcfb3a5a84835:b940be04@us-cdbr-iron-east-01.cleardb.net/heroku_92ff807af41df11?reconnect=true"));
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$con = new mysqli($server, $username, $password, $db) or die('Unable To connect');
 if(isset($_POST['submit']))
 {
     $sql = "INSERT INTO contact (name,email,help_message)
@@ -101,3 +107,5 @@ ga('send', 'pageview');
 <div class="footer">
   &copy;2013-2016 BeMo Academic Consulting Inc. All rights reserved.<a href="http://www.cdainterview.com/disclaimer-privacy-policy.html"target="_blank"><span style="text-decoration:underline;">Disclaimer & Privacy Policy</span></a><a href="contact_us.php" id="rw_email_contact"><span style="text-decoration:underline;padding-left:10px">Contact Us</span></a><a href="https://www.facebook.com/bemoacademicconsulting" class="fa fa-facebook" style="color:white; padding-left: 350px;"></a><a href="https://twitter.com/BeMo_AC" class="fa fa-twitter" style="color:white;padding-left:30px"></a>
 </div>
+</head>
+</html>
