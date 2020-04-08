@@ -84,7 +84,7 @@ if(count($_POST)>0){
 </nav>
 
 <body>
-	<form name="frmUser" method="post" action="https://cdainterview.com/" align="center">
+	<form name="frmUser" method="post" action="home.html" align="center">
 	<div class="message"><?php if($message!="") { echo $message; } ?></div>
 	<div class="container">
 	<div class="d-flex justify-content-center h-100">
