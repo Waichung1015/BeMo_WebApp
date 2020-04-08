@@ -1,0 +1,53 @@
+.container {
+  position: relative;
+}
+
+/* top right text */
+.text-block {
+  position: absolute;
+  top: 20px;
+  left: 450px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.text-block ::after {
+  margin-botton:250px
+}
+.container-two {
+  position: relative;
+
+}
+.text-block-two{
+  position: absolute;
+  align-content: center;
+  padding-top: 50px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.text-block-two::after{
+    margin-botton:250px
+}
+.text-block-two{
+  position: relative;
+
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.text-block-three{
+  position: relative;
+
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.text-block-six::after{
+  margin-bottom:20%;
+
+}
+.container{
+  display: block;
+  margin-bottom: 150px;
+
+}
+
+#footer {display:block;position: fixed; padding:2% 5% 2% 5%;bottom: 0; height: 50px; background: #000066;
+color: white; width: 100%;}
